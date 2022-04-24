@@ -127,6 +127,7 @@
 
 .card__tres--frase {
     font-size: 20px;
+    line-height: 1.45;
 }
 
 .card__quatro--frase {
@@ -200,6 +201,7 @@
 
     .card__tres--frase {
         font-size: 3.5vh;
+        line-height: 1.45;
     }
 
     .card__quatro--frase {
@@ -260,6 +262,7 @@
 
     .card__tres--frase {
         font-size: 3.5vh;
+        line-height: 1.45;
     }
 
     .card__quatro--frase {
@@ -314,6 +317,7 @@
 
     .card__tres--frase {
         font-size: 4vh;
+        line-height: 1.45;
     }
 
     .card__quatro--frase {

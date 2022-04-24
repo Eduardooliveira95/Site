@@ -177,6 +177,28 @@
         }]
     };
 
+    const dataPizza = {
+        labels: labels,
+        datasets: [{
+            label: 'Temperatura do Caminhão xxx-0001',
+            backgroundColor: 'red',
+            borderColor: '#fdfdfd',
+            data: [-5, 0, 1, 3, 4, -7, 7],
+        }]
+    };
+
+    const dataPizza2 = {
+        labels: labels,
+        datasets: [{
+            label: 'Temperatura do Caminhão xxx-0001',
+            backgroundColor: 'green',
+            borderColor: '#fdfdfd',
+            data: [-5, 0, 1, 3, 4, -7, 7],
+        }]
+    };
+
+
+
 
     const config = {
         type: 'line',
@@ -186,13 +208,13 @@
 
     const configDois = {
         type: 'doughnut',
-        data: data,
+        data: dataPizza,
         options: {}
     };
 
     const configTres = {
         type: 'doughnut',
-        data: data,
+        data: dataPizza2,
         options: {}
     };
 </script>
