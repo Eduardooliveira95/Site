@@ -1,0 +1,59 @@
+.corpo_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 11vh;
+}
+
+.titulo {
+    font-size: 48px;
+    margin-top: 5vh;
+}
+
+.container__login {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    box-shadow: 0px 0px 15px #4CBEFB, 5px 5px 15px #0C567D;
+    border-radius: 25px;
+    padding: 3vh 8vh;
+    height: 35vh;
+    justify-content: space-around;
+}
+
+.textLogin{
+    margin-bottom: -4vh;
+}
+
+#ipt_loginEmail {
+    border: transparent;
+    border-bottom: 1px solid #222;
+    background: transparent;
+}
+
+#ipt_loginSenha {
+    border: transparent;
+    border-bottom: 1px solid #222;
+    background: transparent;
+}
+
+.botao_login {
+    border-right: 2px solid #158FCF;
+    border-bottom: 2px solid #158FCF;
+    border-top: 1px solid #158FCF;
+    border-left: 1px solid #158FCF;
+    border-radius: 10px;
+    height: 4vh;
+    width: 10vw;
+}
+
+@media screen and ( max-width: 500px) {
+    .container__login {
+        width: 65vw;
+    }
+    
+    .botao_login {
+        width: 15vw;
+    }
+}

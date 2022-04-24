@@ -1,0 +1,333 @@
+.banner__sobre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    margin-top: 3vh;
+    background: linear-gradient(#158ecf23, transparent);
+}
+
+.titulo__banner {
+    font-size: 8vh;
+    color: #158FCF;
+    font-weight: 700;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.card {
+    background: #158FCF;
+    width: 38vw;
+    height: 42vh;
+    margin: 2vw;
+    border-radius: 20px;
+}
+
+.card5 {
+    background: #158FCF;
+    width: 38vw;
+    height: 42vh;
+    margin: 2vw;
+    border-radius: 20px;
+}
+
+.card6 {
+    background: #158FCF;
+    width: 38vw;
+    height: 42vh;
+    margin: 2vw;
+    border-radius: 20px;
+}
+
+.card__um {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__dois {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__tres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__quatro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__cinco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__seis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.card__um--img {
+    width: 10vw;
+
+}
+
+.card__dois--img {
+    width: 10vw;
+}
+
+.card__tres--img {
+    width: 10vw;
+    margin-top: 1vh;
+}
+
+.card__quatro--img {
+    width: 10vw;
+    margin-top: 1vh;
+}
+
+.card__cinco--img {
+    width: 15vw;
+    margin-top: 2vh;
+
+}
+
+.card__seis--img {
+    width: 10vw;
+}
+
+.card__um--frase {
+    font-size: 20px;
+    margin-left: 4vw;
+    margin-top: 2vw;
+}
+
+.card__dois--frase {
+    font-size: 20px;
+    margin-left: 4vw;
+    margin-top: 2vw;
+}
+
+.card__tres--frase {
+    font-size: 20px;
+}
+
+.card__quatro--frase {
+    font-size: 20px;
+    margin-left: 4vw;
+    margin-top: 2vw;
+}
+
+.card__cinco--frase {
+    font-size: 20px;
+    margin-left: 4vw;
+    margin-top: 2vw;
+}
+
+.card__seis--frase {
+    font-size: 20px;
+    margin-left: 4vw;
+    margin-top: 2vw;
+}
+
+
+@media screen and (max-width: 500px) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .card {
+        width: 60vw;
+        height: 35vh;
+        margin: 4vw;
+    }
+
+    .card5 {
+        width: 60vw;
+        height: 49vh;
+        margin: 4vw;
+    }
+
+    .card6 {
+        width: 60vw;
+        height: 40vh;
+        margin: 4vw;
+    }
+
+    .card__cinco--img {
+        width: 35vw;
+        margin-top: 2vh;
+    
+    }
+
+    .card__seis--img {
+        width: 27vw;
+        margin-top: 2vh;
+    
+    }
+
+    .card__um--frase {
+        font-size: 3.5vh;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    .card__dois--frase {
+        font-size: 3.5vh;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    .card__tres--frase {
+        font-size: 3.5vh;
+    }
+
+    .card__quatro--frase {
+        font-size: 3.5vh;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    .card__cinco--frase {
+        font-size: 3.5vh;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    .card__seis--frase {
+        font-size: 3.5vh;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .card5 {
+        width: 38vw;
+        height: 45vh;
+        margin: 2vw;
+    }
+
+    .card6 {
+        width: 38vw;
+        height: 45vh;
+        margin: 2vw;
+    }
+
+    .card__cinco--img {
+        width: 21vw;
+        margin-top: 2vh;
+    
+    }
+
+    .card__seis--img {
+        width: 16vw;
+        margin-top: 2vh;
+    
+    }
+
+    .card__um--frase {
+        font-size: 3.5vh;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    .card__dois--frase {
+        font-size: 3.5vh;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    .card__tres--frase {
+        font-size: 3.5vh;
+    }
+
+    .card__quatro--frase {
+        font-size: 3.5vh;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    .card__cinco--frase {
+        font-size: 3.5vh;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+    .card__seis--frase {
+        font-size: 3.5vh;
+        margin-left: 4vw;
+        margin-top: 2vw;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+    .card {
+        width: 40vw;
+        height: 45vh;
+        margin: 2vw;
+    }
+
+    .card5 {
+        width: 40vw;
+        height: 62vh;
+        margin: 2vw;
+    }
+
+    .card6 {
+        width: 40vw;
+        height: 62vh;
+        margin: 2vw;
+    }
+
+    .card__um--frase {
+        font-size: 4vh;
+        margin-left: 6vw;
+    }
+
+    .card__dois--frase {
+        font-size: 4vh;
+        margin-left: 5vw;
+    }
+
+    .card__tres--frase {
+        font-size: 4vh;
+    }
+
+    .card__quatro--frase {
+        font-size: 4vh;
+        margin-left: 3vw;
+    }
+
+    .card__cinco--frase {
+        font-size: 4vh;
+        margin-left: 6vw;
+    }
+
+    .card__seis--frase {
+        font-size: 4vh;
+        margin-left: 6vw;
+    }
+}

@@ -1,0 +1,154 @@
+
+.corpo {
+    width: 100%;
+}
+
+.banner {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 5vh;
+    background-image: url(../img/bannerCaminhao.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner__texto {
+    width: 39.5vw;
+    /* font-size: 35px; */
+    font-size: 4vh;
+    color: #222;
+    margin-top: 8vh;
+    text-shadow: 1px 1px lightgray;
+    font-weight: bolder;
+}
+
+.banner__botao {
+    width: 45vw;
+    background: transparent;
+    border: transparent;
+    color: #158FCF;
+    font-size: 28px;
+    margin-top: 5vh;
+    /* margin-right: 16vw; */
+    text-shadow: 1.2px 1.5px #fdfdfd;
+    font-weight: bolder;
+    transition: 0.2s;
+}
+
+.banner__botao:hover{
+    background: #19aeff3d;
+    width: 17vw;
+    margin-right: 19vw;
+    border-radius: 50px;
+}
+
+.container__meio {
+    width: 100%;
+}
+
+.logo__meio {
+    width: 25vw;
+    /* height: 10vh; */
+    margin-left: 38vw;
+    margin-top: 2vh;
+}
+
+
+@media screen and ( max-width: 500px) {
+    .corpo {
+        width: 100%;
+    }
+
+    .banner {
+        width: 100%;
+        height: 35vh;
+        background-image: url(../img/bannerCaminhao.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .banner__texto {
+        width: 32.5%;
+        /* font-size: 15px; */
+        font-size: 3vh;
+        color: #222;
+        margin-top: 5vh;
+    }
+    
+    .banner__botao {
+        width: 38vw;
+        background: transparent;
+        border: transparent;
+        color: #158FCF;
+        font-size: 18px;
+        /* margin-right: 16vw; */
+        margin-top: 3vh;
+    }
+    
+    .container__meio {
+        width: 100%;
+    }
+    
+    .logo__meio {
+        width: 25vw;
+        /* height: 5vh; */
+        margin-left: 38vw;
+        margin-top: 5vh;
+    }
+    
+}
+
+@media screen and ( min-width: 501px) {
+    .banner__texto {
+        font-size: 4vh;
+    }
+
+    .banner__botao:hover{
+        background: #19aeff3d;
+        width: 30vw;
+        margin-right: 7.513vw;
+        border-radius: 50px;
+    }
+}
+
+@media screen and ( min-width: 1200px) {
+    .banner {
+        background-image: url(../img/bannerCaminhao.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+ 
+    .banner__texto {
+        width: 32vw;
+
+        /* font-size: 45px; */
+        font-size: 5.8vh;
+        color: #222;
+        margin-top: 8vh;
+        margin-right: 2vw;
+    }
+
+    .banner__botao {
+        width: 37.5vw;
+    }
+
+    .banner__botao:hover{
+        background: #19aeff3d;
+        width: 17vw;
+        margin-right: 10.26vw;
+        border-radius: 50px;
+    }
+
+    .logo__meio {
+        width: 20vw;
+        /* height: 18vh; */
+        margin-left: 39vw;
+        margin-top: 5vh;
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="./js/funcoes.js"></script>
+
+
+    <title>IceLog</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/body.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/cabecalho.css">
+    <link rel="stylesheet" href="./css/corpo_cadastro..css">
+    <link rel="stylesheet" href="./css/rodape__cadastro.css">
+    <link rel="icon" href="./img/iceLogRedondo.png">
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <section class="container__cabecalho">
+            <a href="./index.html"><img src="./img/logo4.png" alt="" class="cabecalho__img"></a>
+            <ul class="cabecalho__menu">
+                <li>Contato</li>
+                <li><a href="./sobre.html" >Sobre </a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./cadastro.html">Cadastro</a></li>
+            </ul>
+        </section>
+    </header>
+    <main>
+        <section class="corpo_cadastro">
+            <h1 class="titulo">Cadastro: </h1>
+            <section class="container__cadastro">
+                <p>Nome:</p>
+                <input type="text" id="ipt_cadastroNome">
+                <p>CNPJ:</p>
+                <input type="number" id="ipt_cadastroCNPJ">
+                <p>Email:</p>
+                <input type="email" id="ipt_cadastroEmail">
+                <p>CEP:</p>
+                <input type="number" id="ipt_cadastroCEP">
+                <p>Número:</p>
+                <input type="number" id="ipt_cadastroNumero">
+                <p>Senha:</p>
+                <input type="password" id="ipt_cadastroSenha">
+                <p>Confirme a senha:</p>
+                <input type="password" id="ipt_cadastroSenhaConfirmacao">
+                <button class="botao_cadastro" onclick="cadastrar()">Cadastrar</button>
+                <span id="cardErro"></span>
+                <span id="mensagem_erro"></span>
+
+            </section>
+        </section>
+    </main>
+    <footer class="rodape__cadastro">
+        <img class="logo__rodape" src="./img/logo4.png" alt="">
+        <img class="copy" src="./img/copy.png" alt="">
+        <p>copy</p>
+        <img class="logo_face" src="./img/logo face.png" alt="">
+        <img class="logo_insta" src="./img/logo inst.png" alt="">
+        <img class="logo_tt" src="./img/logo tt.png" alt="">
+    </footer>
+
+
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = ipt_cadastroNome.value;
+        var cnpjVar = ipt_cadastroCNPJ.value;
+        var emailVar = ipt_cadastroEmail.value;
+        var cepVar = ipt_cadastroCEP.value;
+        var numeroVar = ipt_cadastroNumero.value;
+        var senhaVar = ipt_cadastroSenha.value;
+        var confirmacaoSenhaVar = ipt_cadastroSenhaConfirmacao.value;
+
+        if (nomeVar == "" || cnpjVar == "" || emailVar == "" || cepVar == "" || numeroVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Preencha todos os campos para prosseguir!";
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        if (senhaVar != confirmacaoSenhaVar) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "As senhas inseridas devem ser iguais para prosseguir!";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                cnpjServer: cnpjVar,
+                emailServer: emailVar,
+                cepServer: cepVar,
+                numeroServer: numeroVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block"
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso!";
+                window.location = "login.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
