@@ -51,10 +51,15 @@
 }
 
 .logo__meio {
-    width: 25vw;
+    width: 16vw;
     /* height: 10vh; */
-    margin-left: 38vw;
+    margin-left: 42vw;
     margin-top: 2vh;
+}
+
+.calculadora__botao:hover{
+    width: 17vw;
+    border-radius: 50px;
 }
 
 
@@ -96,11 +101,11 @@
     
     .logo__meio {
         width: 25vw;
-        /* height: 5vh; */
-        margin-left: 38vw;
-        margin-top: 5vh;
-    }
-    
+        /* height: 5vh;  */
+        margin-left: 37vw;
+        margin-top: 4vh;
+        margin-bottom: 2vh;
+    } 
 }
 
 @media screen and ( min-width: 501px) {
@@ -146,9 +151,10 @@
     }
 
     .logo__meio {
-        width: 20vw;
+        width: 10vw;
         /* height: 18vh; */
-        margin-left: 39vw;
+        margin-left: 44.3vw;
         margin-top: 5vh;
+        margin-bottom: 3vh;
     }
 }

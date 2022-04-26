@@ -1,0 +1,178 @@
+@media screen and (max-width: 500px){
+    .contato {
+        background: #158FCF;
+        width: 58vw;
+        margin: 4vh 20vw;
+        border-bottom-left-radius:5vh ;
+        border-bottom-right-radius:5vh ;
+    } 
+    .contatos {
+        background: linear-gradient(#000, #158FCF);
+        text-align: center;
+        padding: 2vh;
+        color: aliceblue;
+        font-size: 3vh;
+    }
+    .contato_corpo{
+        display: flex;
+        flex-direction: column;
+        padding: 6.4vw;
+    }
+    .texto_contato{
+        font-size: 2.3vh;
+        font-weight: bold;
+        margin-bottom: 1vh;
+        text-align:center;
+        margin-top: 1vh;
+
+    }
+    .ipt_contato{
+        margin-top: 1vh;
+        border-radius: 3vh;
+        text-align: center;
+    }
+    .btn_contato{
+        height: 4vh;
+        margin-top: 1vh;
+        font-family: monospace;
+        font-weight: bold;
+        background: linear-gradient(black, #0C567D);
+        border: transparent;
+        border-radius: 3vh;
+        color: wheat;
+    }
+
+    .btn_contato:hover {
+        transition: 00.2s;
+        border: 3px solid white;
+    }
+
+    #textarea_msg{
+        margin-bottom: 1vh;
+        font-size: 2vh;
+        border-radius: 3vh;
+        padding: 1.5vw;
+        font-family: monospace;
+    }
+    
+}
+
+@media screen and (min-width: 500px){
+    .contato {
+        background:#158FCF;
+        width: 58vw;
+        border-bottom-left-radius:5vh ;
+        border-bottom-right-radius:5vh ;
+        margin: 4vh 20vw;
+    }
+    .contatos {
+        background: linear-gradient(#000, #158FCF);
+        text-align: center;
+        padding: 5vh;
+        color: aliceblue;
+        font-size: 5vh;
+    }
+    .contato_corpo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 3vw;
+    }
+    .texto_contato{
+        font-size: 5vh;
+        font-weight: bold;
+        margin-bottom: 1vh;
+        text-align:center;
+        margin-top: 1vh;
+    }
+    .ipt_contato{
+        margin-top: 1vh;
+        border-radius: 3vh;
+        text-align: center;
+        height: 5vh;
+        font-size: 2.5vh;
+    }
+    #textarea_msg{
+        margin-bottom: 1vh;
+        font-size: 2.5vh;
+        border-radius: 3vh;
+        padding: 1vw;
+        font-family: monospace;
+    }
+    .btn_contato{
+        height: 10vh;
+        width: 20vw;
+        margin-top: 1vh;
+        font-family: monospace;
+        font-size: 4vh;
+        background: linear-gradient(black, #0C567D);
+        border: transparent;
+        border-radius: 3vh;
+        margin-left: 17.4vw;
+        color: wheat;
+    }
+
+    .btn_contato:hover {
+        transition: 00.2s;
+        border: 3px solid white;
+    }
+}
+@media screen and (min-width: 1200px){
+    .contato{
+        background:#158FCF;
+        width: 58vw;
+        border-bottom-left-radius:5vh ;
+        border-bottom-right-radius:5vh ;
+        margin: 4vh 20vw;
+    }
+    .contatos {
+        background: linear-gradient( black, #158FCF);
+        text-align: center;
+        padding: 5vh;
+        color: black;
+        font-size: 5vh;
+    }
+    .contato_corpo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 3vw;
+    }
+    .texto_contato{
+        font-size: 5vh;
+        font-weight: bold;
+        margin-bottom: 1vh;
+        text-align:center;
+        margin-top: 1vh;
+    }
+    .ipt_contato{
+        margin-top: 1vh;
+        border-radius: 3vh;
+        text-align: center;
+        height: 5vh;
+        font-size: 3vh;
+    }
+    #textarea_msg{
+        margin-bottom: 1vh;
+        font-size: 3vh;
+        border-radius: 3vh;
+        padding: 1vw;
+        font-family: monospace;
+    }
+    .btn_contato{
+        height: 8vh;
+        width: 20vw;
+        margin-top: 1vh;
+        font-size: 5vh;
+        background: linear-gradient(black, #0C567D);
+        border-radius: 3vh;
+        border: transparent;
+        margin-left: 17vw;
+        color: wheat;
+    }
+
+    .btn_contato:hover {
+        transition: 00.2s;
+        border: 3px solid white;
+    }
+}

@@ -9,7 +9,8 @@
     height: 15vh;
     margin-left: 15vw;
     margin-top: 1vh;
-    background: #fff;
+    /* background: #fff; */
+    background: linear-gradient(#158ecf23, transparent);
 }
 
 a {

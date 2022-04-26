@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/corpo.css">
     <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/rodape.css">
+    <link rel="stylesheet" href="./css/contato.css">
     <link rel="icon" href="./img/iceLogRedondo.png">
 
 </head>
@@ -27,7 +28,6 @@
             <a href="./index.html"><img src="./img/logo4.png" alt="" class="cabecalho__img"></a>
             <ul class="cabecalho__menu">
                 <li><a href="./index.html">Home</a></li>
-                <li>Contato</li>
                 <li><a href="./sobre.html" >Sobre </a></li>
                 <li><a href="./login.html">Login</a></li>
                 <li><a href="./cadastro.html">Cadastro</a></li>
@@ -49,14 +49,14 @@
             <div class="card">
                 <div class="card__um">
                     <img src="./img/graficoMain.png" alt="" class="card__um--img">
-                    <div class="card__um--frase">Monitoramos a temperatura das Câmaras</div>
+                    <div class="card__um--frase">Monitoramos a temperatura das suas câmaras frias</div>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card__dois">
                     <img src="./img/MonitoramentoPc.png" alt="" class="card__dois--img">
-                    <div class="card__dois--frase">Nossa Empresa constrói um histórico de temperatura</div>
+                    <div class="card__dois--frase">Nossa empresa constrói um histórico de temperatura</div>
                 </div>
             </div>
 
@@ -68,13 +68,13 @@
                             <p>Nossos Pilares:</p>
                         </div>
                         <div>
-                            <p>-Precisão</p>
+                            <p>-Precisão;</p>
                         </div>
                         <div>
-                            <p>-Segurança</p>
+                            <p>-Segurança;</p>
                         </div>
                         <div>
-                            <p>-Confiabilidade</p>
+                            <p>-Confiabilidade.</p>
                         </div>
                     </div>
                 </div>
@@ -84,8 +84,27 @@
                 <div class="card__quatro">
                     <a href="./simulador.html"><img src="./img/calculadora.png" alt="" class="card__quatro--img"></a>
                     <div class="card__quatro--frase">Calcule quanto você deixará de perder com nosso sistema:</div>
+                    <button class="calculadora__botao"><a href="./simulador.html">Calcule</a></button>
                 </div>
             </div>
+        </section>
+        <section class="contato">
+            <div class="contatos">
+                <p>Fale Conosco:</p>    
+            </div>
+            <div class="contato_corpo">
+                    <p class="texto_contato">Seu nome:</p>
+                    <input type="text" placeholder="Digite seu nome" class="ipt_contato">
+                    <p class="texto_contato">Nome da empresa:</p>
+                    <input type="text" placeholder="Empresa" class="ipt_contato">
+                    <p class="texto_contato">Digite seu Email:</p>
+                    <input type="email" placeholder="Seu email" class="ipt_contato">
+                    <p class="texto_contato">Assunto:</p>
+                    <input type="text" placeholder="Assunto a ser tratado" class="ipt_contato">
+                    <p class="texto_contato" id="p_msg">Mensagem:</p>
+                    <textarea id="textarea_msg" cols="30" rows="10"></textarea>
+                    <button class="btn_contato">Enviar</button>
+                </div>
         </section>
     </main>
     <footer class="rodape">

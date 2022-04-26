@@ -8,7 +8,7 @@
 .card {
     background: #158FCF;
     width: 35vw;
-    height: 35vh;
+    height: 47vh;
     margin: 2vw;
     border-radius: 20px;
 }
@@ -59,24 +59,39 @@
 
 .card__um--frase {
     font-size: 20px;
-    margin-left: 4vw;
     margin-top: 2vw;
+    text-align: center;
 }
 
 .card__dois--frase {
     font-size: 20px;
-    margin-left: 4vw;
     margin-top: 2vw;
+    text-align: center;
 }
 
 .card__tres--frase {
     font-size: 20px;
+    text-align: center;
+    line-height: 4.8vh;
 }
 
 .card__quatro--frase {
     font-size: 20px;
-    margin-left: 4vw;
     margin-top: 2vw;
+    text-align: center;
+}
+
+.calculadora__botao{
+    width: 18vw;
+    border: transparent;
+    border-radius: 15px;
+    color: #158FCF;
+    font-size: 28px;
+    margin-top: 5vh;
+    /* margin-right: 16vw; */
+    font-weight: bolder;
+    transition: 0.2s;
+    text-shadow: 1.2px 1.5px #fdfdfd;
 }
 
 
@@ -90,72 +105,102 @@
 
     .card {
         width: 55vw;
-        height: 25vh;
+        height: 30vh;
         margin: 4vw;
+
     }
 
     .card__um--frase {
         font-size: 3.5vh;
-        margin-left: 4vw;
         margin-top: 2vw;
+        text-align: center;
+
     }
 
     .card__dois--frase {
         font-size: 3.5vh;
-        margin-left: 4vw;
         margin-top: 2vw;
+        text-align: center;
     }
 
     .card__tres--frase {
         font-size: 3.5vh;
+        text-align: center;
     }
 
     .card__quatro--frase {
         font-size: 3.5vh;
-        margin-left: 4vw;
         margin-top: 2vw;
+        text-align: center;
+    }
+
+    .calculadora__botao{
+        width: 30vw;
+        border: transparent;
+        border-radius: 15px;
+        color: #158FCF;
+        font-size: 3vh;
+        margin-top: 5vh;
+        /* margin-right: 16vw; */
+        font-weight: bolder;
+        transition: 0.2s;
+        text-shadow: 1.2px 1.5px #fdfdfd;
     }
 }
 
 @media screen and (min-width: 500px) {
     .card__um--frase {
         font-size: 3.5vh;
-        margin-left: 4vw;
-        margin-top: 2vw;
+        text-align: center;
     }
 
     .card__dois--frase {
         font-size: 3.5vh;
-        margin-left: 4vw;
         margin-top: 2vw;
+        text-align: center;
+
     }
 
     .card__tres--frase {
         font-size: 3.5vh;
+        text-align: center;
+
     }
 
     .card__quatro--frase {
         font-size: 3.5vh;
-        margin-left: 4vw;
         margin-top: 2vw;
+        text-align: center;
+    }
+
+    .calculadora__botao{
+        width: 18vw;
+        border: transparent;
+        border-radius: 15px;
+        color: #158FCF;
+        font-size: 3.5vh;
+        margin-top: 5vh;
+        /* margin-right: 16vw; */
+        font-weight: bolder;
+        transition: 0.2s;
+        text-shadow: 1.2px 1.5px #fdfdfd;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .card {
         width: 35vw;
-        height: 40vh;
+        height: 47vh;
         margin: 2vw;
+        /* text-align: center; */
     }
 
     .card__um--frase {
         font-size: 4vh;
-        margin-left: 6vw;
     }
 
     .card__dois--frase {
         font-size: 4vh;
-        margin-left: 5vw;
     }
 
     .card__tres--frase {
@@ -164,6 +209,18 @@
 
     .card__quatro--frase {
         font-size: 4vh;
-        margin-left: 3vw;
+    }
+
+    .calculadora__botao{
+        width: 18vw;
+        border: transparent;
+        border-radius: 15px;
+        color: #158FCF;
+        font-size: 4.5vh;
+        margin-top: 5vh;
+        /* margin-right: 16vw; */
+        font-weight: bolder;
+        transition: 0.2s;
+        text-shadow: 1.2px 1.5px #fdfdfd;
     }
 }
