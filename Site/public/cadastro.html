@@ -194,12 +194,12 @@
                     <input class="inputs__cadastro--meio" type="text" id="email_input">
                     <p  class="titulo__input--meio">Senha:</p>
                     <input class="inputs__cadastro--meio" type="text" id="senha_input">
-                    <!-- <p  class="titulo__input--meio">Pista:</p> -->
-                    <!-- <input class="inputs__cadastro--meio" type="text" id="pista_input"> -->
-                    <!-- <p  class="titulo__input--meio">Motor:</p> -->
-                    <!-- <input class="inputs__cadastro--meio" type="text" id="motor_input"> -->
-                    <!-- <p  class="titulo__input--meio">Chassi:</p> -->
-                    <!-- <input class="inputs__cadastro--meio" type="text" id="chassi_input"> -->
+                    <p  class="titulo__input--meio">Pista:</p>
+                    <input class="inputs__cadastro--meio" type="text" id="pista_input">
+                    <p  class="titulo__input--meio">Motor:</p>
+                    <input class="inputs__cadastro--meio" type="text" id="motor_input">
+                    <p  class="titulo__input--meio">Chassi:</p>
+                    <input class="inputs__cadastro--meio" type="text" id="chassi_input">
                     <button class="botao__cadastro--meio" onclick="cadastrar()">Cadastrar</button>
                     <button onclick="voltar()" class="botao__cadastro--meio">Voltar</button>
                 </section>
@@ -314,6 +314,8 @@
 
 <script>
 
+    var retorno = [];
+
     var vt_votos = []
     var vt_chassiCRG = []
     var vt_chassiTonyKart = []
@@ -389,9 +391,9 @@
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
-        // var pistaVar = pista_input.value;
-        // var motorVar = motor_input.value;
-        // var chassiVar = chassi_input.value;
+        var pistaVar = pista_input.value;
+        var motorVar = motor_input.value;
+        var chassiVar = chassi_input.value;
         // var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "") {
@@ -417,9 +419,9 @@
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar,
-                // pistaServer: pistaVar,
-                // motorServer: motorVar,
-                // chassiServer: chassiVar
+                pistaServer: pistaVar,
+                motorServer: motorVar,
+                chassiServer: chassiVar
             })
         }).then(function (resposta) {
 
@@ -451,6 +453,49 @@
     //     cardErro.style.display = "none"
     // }
 
+
+
+
+// --------------------------- Métricas ----------------------------
+
+
+
+    function vot() {
+        fetch("/usuarios/listar", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO listar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+                resposta.json().then(json => {
+                    retorno = [];
+                    
+                    for(let i = 0; i < json.length; i ++ ){
+                        retorno.push(json[i]);
+                        console.log(retorno[i])
+                    }
+                });
+            } else {
+                console.log("Houve um erro ao tentar realizar o listar!");
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+
+    
+    
 </script>
 
 

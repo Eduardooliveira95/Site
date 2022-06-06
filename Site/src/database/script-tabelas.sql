@@ -100,6 +100,75 @@ CREATE TABLE medida (
 
 
 
+-- create database projetoIndividual;
+
+-- use projetoIndividual;
+
+
+-- create table usuario (
+-- 	idUsuario int primary key auto_increment,
+--     nome varchar(45),
+--     email varchar(45),
+--     senha varchar(45)
+-- );
+
+-- create table preferencia (
+-- 	idPreferencia int primary key auto_increment,
+--     pista varchar(45),
+--     motor varchar(45),
+--     chassi varchar(45)
+-- );
+
+-- create table conexao (
+-- 	fkUsuario int,
+--     fkPreferencia int,
+--     foreign key (fkUsuario) references usuario (idUsuario),
+--     foreign key (fkPreferencia) references preferencia (idPreferencia)
+-- );
+
+
+-- insert into usuario (nome, email, senha) values 
+-- ('Eduardo','eduardo@teste.com',12),
+-- ('Chico','chico@teste.com',123);
+
+
+-- insert into preferencia (pista, motor, chassi) values 
+-- ('Interlagos','Iame','Mini'),
+-- ('Aldeia da Serra','Rotax','CRG');
+
+-- insert into conexao values
+-- (1,1),
+-- (2,2);
+
+-- select * from usuario;
+
+-- select * from preferencia;
+
+-- select * from conexao;
+
+-- select usuario.*, preferencia.motor,conexao.* 
+-- 	from usuario 
+-- 		join conexao 
+-- 			on usuario.idUsuario = conexao.fkUsuario
+-- 		join preferencia
+-- 			on preferencia.idPreferencia = conexao.fkPreferencia;
+            
+-- select usuario.*, preferencia.chassi,conexao.* 
+-- 	from usuario 
+-- 		join conexao 
+-- 			on usuario.idUsuario = conexao.fkUsuario
+-- 		join preferencia
+-- 			on preferencia.idPreferencia = conexao.fkPreferencia;
+            
+-- select usuario.*, preferencia.pista,conexao.* 
+-- 	from usuario 
+-- 		join conexao 
+-- 			on usuario.idUsuario = conexao.fkUsuario
+-- 		join preferencia
+-- 			on preferencia.idPreferencia = conexao.fkPreferencia;
+
+
+
 create database projetoIndividual;
 
 use projetoIndividual;
@@ -109,60 +178,42 @@ create table usuario (
 	idUsuario int primary key auto_increment,
     nome varchar(45),
     email varchar(45),
-    senha varchar(45)
-);
-
-create table preferencia (
-	idPreferencia int primary key auto_increment,
+    senha varchar(45),
     pista varchar(45),
     motor varchar(45),
     chassi varchar(45)
 );
 
-create table conexao (
-	fkUsuario int,
-    fkPreferencia int,
-    foreign key (fkUsuario) references usuario (idUsuario),
-    foreign key (fkPreferencia) references preferencia (idPreferencia)
-);
 
-
-insert into usuario (nome, email, senha) values 
-('Eduardo','eduardo@teste.com',12),
-('Chico','chico@teste.com',123);
-
-
-insert into preferencia (pista, motor, chassi) values 
-('Interlagos','Iame','Mini'),
-('Aldeia da Serra','Rotax','CRG');
-
-insert into conexao values
-(1,1),
-(2,2);
+insert into usuario (nome, email, senha, pista, motor, chassi) values 
+ ('Eduardo','eduardo@teste.com',12, 'Interlagos','Iame','CRG'),
+ ('Chico','chico@teste.com',123, 'Aldeia','Rotax','TonyKart');
 
 select * from usuario;
 
-select * from preferencia;
-
-select * from conexao;
-
-select usuario.*, preferencia.motor,conexao.* 
-	from usuario 
-		join conexao 
-			on usuario.idUsuario = conexao.fkUsuario
-		join preferencia
-			on preferencia.idPreferencia = conexao.fkPreferencia;
-            
-select usuario.*, preferencia.chassi,conexao.* 
-	from usuario 
-		join conexao 
-			on usuario.idUsuario = conexao.fkUsuario
-		join preferencia
-			on preferencia.idPreferencia = conexao.fkPreferencia;
-            
-select usuario.*, preferencia.pista,conexao.* 
-	from usuario 
-		join conexao 
-			on usuario.idUsuario = conexao.fkUsuario
-		join preferencia
-			on preferencia.idPreferencia = conexao.fkPreferencia;
+select count(pista) from usuario
+	where usuario.pista = 'Interlagos';
+    
+    select count(pista) from usuario
+	where usuario.pista = 'Aldeia';
+    
+    select count(pista) from usuario
+	where usuario.pista = 'Granja Viana';
+    
+   select count(motor) from usuario
+	where usuario.motor = 'Iame'; 
+    
+   select count(motor) from usuario
+	where usuario.motor = 'Rotax';
+    
+       select count(motor) from usuario
+	where usuario.motor = 'TMKZ10';
+    
+   select count(chassi) from usuario
+	where usuario.chassi = 'CRG';
+    
+       select count(chassi) from usuario
+	where usuario.chassi = 'TonyKart';
+    
+       select count(chassi) from usuario
+	where usuario.chassi = 'TechSpeed'; 
