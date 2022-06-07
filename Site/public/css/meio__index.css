@@ -117,7 +117,7 @@
 }
 
 .meio__cadastro--input:hover {
-    padding: 15%;
+    padding: 18%;
 }
 
 .titulo__meio {
@@ -219,8 +219,10 @@
 
 .check {
     margin-top: 30px;
-    width: 20px;
+    width: 100px;
     height: 20px;
+    color: #e0053e;
+    font-size: 50x;
 }
 
 .sec__motor {
@@ -275,4 +277,15 @@
     background: #8C0327;
     box-shadow: inset -13px -13px 26px #380110,
             inset 13px 13px 26px #e0053e;
+}
+
+.msg__validação {
+    color: var(--corBranca);
+    font-size: 20px;
+}
+
+
+.msg__deuTudoCerto {
+    color: var(--corBranca);
+    font-size: 40px;
 }

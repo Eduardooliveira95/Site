@@ -203,6 +203,14 @@
                     <button class="botao__cadastro--meio" onclick="cadastrar()">Cadastrar</button>
                     <button onclick="voltar()" class="botao__cadastro--meio">Voltar</button>
                 </section>
+
+
+                <section id="cardErro" style="display: block;">
+                    <section id="mensagem_erro"></section>
+                </section>
+                <section id="div_aguardar"></section>
+
+
                 <section class="meio__cadastro--input" id="login__meio" style="display: none;">
                     <p  class="titulo__input--meio">Email:</p>
                     <input class="inputs__cadastro--meio" type="text" id="">
@@ -224,21 +232,21 @@
                         <p class="nomeCheck">CRG</p>
                         <label for="ipt_crg"><img src="./assets/imgs/crg.jpg" alt="" class="img__resultado"></label>
                         <!-- <input class="check" type="checkbox" id="ipt_crg"> -->
-                        <span class="check" type="checkbox" id="ipt_crg">
+                        <p class="check" id="ipt_crg"></p>
                     </section>
                     
                     <section class="div__check">
                         <p class="nomeCheck">Tony Kart</p>
                         <label for="ipt_tonyKart"><img src="./assets/imgs/tonyKart.jpg" alt="" class="img__resultado"></label>
                         <!-- <input class="check" type="checkbox" id="ipt_tonyKart"> -->
-                        <span class="check" type="checkbox" id="ipt_tonyKart">
+                        <p class="check" id="ipt_tonyKart"></p>
                     </section>
                     
                     <section class="div__check">
                         <p class="nomeCheck">TechSpeed</p>
                         <label for="ipt_techSpeed"><img src="./assets/imgs/techspeed.jpg.opdownload" alt="" class="img__resultado"></label>
                         <!-- <input class="check" type="checkbox" id="ipt_techSpeed"> -->
-                        <span class="check" type="checkbox" id="ipt_techSpeed">
+                        <p class="check" id="ipt_techSpeed"></p>
                     </section>
 
                 </section>
@@ -250,14 +258,14 @@
                         <p class="nomeCheck">Iame</p>
                         <label for="ipt_iame"><img src="./assets/imgs/iame.jpg" alt="" class="img__resultado"></label>
                         <!-- <input class="check" type="text" id="ipt_iame"> -->
-                        <span class="check" type="text" id="ipt_iame">
+                        <p class="check"id="ipt_iame"></p>
                     </section>
                     
                     <section class="div__check">
                         <p class="nomeCheck">TMKZ10</p>
                         <label for="ipt_tmKz10"><img src="./assets/imgs/tmKz10.jpg" alt="" class="img__resultado"></label>
                         <!-- <input class="check" type="checkbox" id="ipt_tmKz10"> -->
-                        <span class="check" type="checkbox" id="ipt_tmKz10">
+                        <p class="check" id="ipt_tmKz10"></p>
                     </section>
 
 
@@ -265,7 +273,7 @@
                         <p class="nomeCheck">Rotax</p>
                         <label for="ipt_rotax"><img src="./assets/imgs/rotaxKart.jpg" alt="" class="img__resultado"></label>
                         <!-- <input class="check" type="checkbox" id="ipt_rotax"> -->
-                        <span class="check" type="checkbox" id="ipt_rotax">
+                        <p class="check" id="ipt_rotax"></p>
                     </section>
 
                 </section>
@@ -278,21 +286,21 @@
                         <p class="nomeCheck">Aldeia da Serra</p>
                         <label for="ipt_Aldeia"><img src="./assets/imgs/aldeiaDaSerra.jpg" alt="" class="img__resultado"></label>
                         <!-- <input class="check" type="checkbox" id="ipt_Aldeia"> -->
-                        <span class="check" type="checkbox" id="ipt_Aldeia">
+                        <p class="check" id="ipt_Aldeia"></p>
                     </section>
                     
                     <section class="div__check">
                         <p class="nomeCheck">Interlagos</p>
                         <label for="ipt_Interlagos"><img src="./assets/imgs/interlagos.jpg" alt="" class="img__resultado"></label>
                         <!-- <input class="check" type="checkbox" id="ipt_Interlagos"> -->
-                        <span class="check" type="checkbox" id="ipt_Interlagos">
+                        <p class="check" id="ipt_Interlagos"></p>
                     </section>
                     
                     <section class="div__check">
                         <p class="nomeCheck">Granja Viana</p>
                         <label for="ipt_Granja"><img src="./assets/imgs/granjaViana.jpg" alt="" class="img__resultado"></label>
                         <!-- <input class="check" type="checkbox" id="ipt_Granja"> -->
-                        <span class="check" type="checkbox" id="ipt_Granja">
+                        <p class="check" id="ipt_Granja"></p>
                     </section>
                 
                 </section>
@@ -405,16 +413,44 @@
         var chassiVar = chassi_input.value;
         // var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "") {
-            // cardErro.style.display = "block"
-            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || pistaVar == "" || motorVar == "" || chassiVar == "") {
+            cardErro.style.display = "block"
+            alert(`Todos os campos em branco)`)
 
+            if (nomeVar == "") {
+            mensagem_erro.innerHTML = "<span class ='msg__validação'>Nome está em branco</span>"
+            }else
+            if (emailVar == "") {
+            mensagem_erro.innerHTML = "<span class ='msg__validação'>Email está em branco</span>"
+            }else
+            if (senhaVar == "") {
+            mensagem_erro.innerHTML = "<span class ='msg__validação'>Senha está em branco</span>"
+            }else
+
+            if (senhaVar != confirmarSenhaVar) {
+            mensagem_erro.innerHTML = "A senha não confere"
+            }
+
+        finalizarAguardar();
+        return false;
+    }
+        if (emailVar.indexOf("@") == -1, emailVar.indexOf("email") == -1, emailVar.indexOf(".com") == -1 ) {
+            window.alert("E-mail inválido! Verifique e tente novamente.");
             finalizarAguardar();
             return false;
         }
-        else {
-            // setInterval(sumirMensagem, 5000)
+
+        if (senhaVar.length <= 3 || senhaVar.length >= 40) {
+            mensagem_erro.innerHTML = "A Senha deve ter no mínimo 4 caracteres."
+            finalizarAguardar();
+            return false;
         }
+
+        // else {
+        //     setInterval(sumirMensagem, 5000)
+        // }
+
+
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -442,7 +478,7 @@
                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
-                    window.location = "login.html";
+                    window.location = "cadastro.html";
                 }, "2000")
                 
                 limparFormulario();
@@ -512,36 +548,36 @@
             console.log(index);
             if (retorno[index].pista == 'Aldeia da Serra') {
                 vt_pistaAldeia.push(retorno[index].pista);
-                ipt_Aldeia.innerHTML = `Votos: ${vt_pistaAldeia.length}`;
+                ipt_Aldeia.innerHTML = `<span style="font-size: 25px;"> Votos: ${vt_pistaAldeia.length}</span>`;
             } else if (retorno[index].pista == 'Interlagos') {
                 vt_pistaInterlagos.push(retorno[index].pista);
-                ipt_Interlagos.innerHTML = `Votos: ${vt_pistaInterlagos.length}`;
+                ipt_Interlagos.innerHTML = `<span style="font-size: 25px;"> Votos: ${vt_pistaInterlagos.length}</span>`;
             } else if (retorno[index].pista == 'Granja Viana') {
                 vt_pistaGranja.push(retorno[index].pista);
-                ipt_Granja.innerHTML = `Votos: ${vt_pistaGranja.length}`;
+                ipt_Granja.innerHTML = `<span style="font-size: 25px;"> Votos: ${vt_pistaGranja.length}</span>`;
             }
 
 
             if (retorno[index].motor == 'Iame') {
                 vt_motorIame.push(retorno[index].motor);
-                ipt_iame.innerHTML = `Votos: ${vt_motorIame.length}`;
+                ipt_iame.innerHTML = `<span style="font-size: 25px;"> Votos: ${vt_motorIame.length}</span>`;
             } else if (retorno[index].motor == 'TMKZ10') {
                 vt_motorTMKZ10.push(retorno[index].motor);
-                ipt_tmKz10.innerHTML = `Votos: ${vt_motorTMKZ10.length}`;
+                ipt_tmKz10.innerHTML = `<span style="font-size: 25px;"> Votos: ${vt_motorTMKZ10.length}</span>`;
             } else if (retorno[index].motor == 'Rotax') {
                 vt_motorRotax.push(retorno[index].motor);
-                ipt_rotax.innerHTML = `Votos: ${vt_motorRotax.length}`;
+                ipt_rotax.innerHTML = `<span style="font-size: 25px;"> Votos: ${vt_motorRotax.length}<span>`;
             }
         
             if (retorno[index].chassi == 'CRG') {
                 vt_chassiCRG.push(retorno[index].chassi);
-                ipt_crg.innerHTML = `Votos: ${vt_chassiCRG.length}`;
+                ipt_crg.innerHTML = `<span style="font-size: 25px;"> Votos: ${vt_chassiCRG.length}</span>`;
             } else if (retorno[index].chassi == 'TonyKart') {
                 vt_chassiTonyKart.push(retorno[index].chassi);
-                ipt_tonyKart.innerHTML = `Votos: ${vt_chassiTonyKart.length}`;
+                ipt_tonyKart.innerHTML = `<span style="font-size: 25px;"> Votos: ${vt_chassiTonyKart.length}</span>`;
             } else if (retorno[index].chassi == 'TechSpeed') {
                 vt_chassiTechSpeed.push(retorno[index].chassi);
-                ipt_techSpeed.innerHTML = `Votos: ${vt_chassiTechSpeed.length}`;
+                ipt_techSpeed.innerHTML = `<span style="font-size: 25px;"> Votos: ${vt_chassiTechSpeed.length}</span>`;
             }
         }
     }
